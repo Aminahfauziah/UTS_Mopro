@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/imV"
-        android:layout_width="100px"
-        android:layout_height="100px"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:src="@drawable/greencake"
         android:layout_marginLeft="63dp"
         android:layout_marginStart="63dp"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textColor="#060606"
-        android:textSize="8pt"
+        android:textSize="15pt"
         android:layout_marginTop="36dp"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/imV"

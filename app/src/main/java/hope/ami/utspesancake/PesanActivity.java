@@ -1,5 +1,8 @@
 package hope.ami.utspesancake;
 
+/**
+ * Created by Andriana on 10/30/2016.
+ */
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,18 +11,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/**
- * Created by acer on 10/31/2016.
- */
-
-public class PesanCakeActivity extends AppCompatActivity {
+public class PesanActivity extends AppCompatActivity {
 
     Button btnlogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pesan);
+        setContentView(R.layout.pesan_activity);
 
         btnlogout = (Button) findViewById(R.id.logout);
 
@@ -55,7 +54,7 @@ public class PesanCakeActivity extends AppCompatActivity {
         pesan.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
 
-                Intent intent = new Intent(getApplicationContext(),HasilPesanActivity.class);
+                Intent intent = new Intent(getApplicationContext(),PesananJadi.class);
                 Bundle b = new Bundle();
 
 
@@ -77,6 +76,3 @@ public class PesanCakeActivity extends AppCompatActivity {
         });
     }
 }
-
-
-

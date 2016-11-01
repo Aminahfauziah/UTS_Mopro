@@ -1,8 +1,8 @@
 package hope.ami.utspesancake;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -12,8 +12,7 @@ import android.widget.SimpleAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     SessionManager session;
     protected ListView lv;
     protected ListAdapter adapter;
@@ -37,12 +36,13 @@ public class MainActivity extends AppCompatActivity {
 
         lv = (ListView) findViewById(R.id.lv);
 
-        Pil = new String[] {"greencake", "breadcake", "creamcake", "jellycake"};
+        Pil = new String[] {"Green Cake", "Bread Cake", "Cream Cake", "Jelly Cake"};
         Gbr = new String[] {
                 Integer.toString(R.drawable.greencake),
                 Integer.toString(R.drawable.breadcake),
                 Integer.toString(R.drawable.creamcake),
-                Integer.toString(R.drawable.jellycake)};
+                Integer.toString(R.drawable.jellycake),};
+        lv.setOnItemClickListener(this);
         mylist = new ArrayList<HashMap<String,String>>();
         mylistnama = new ArrayList();
         mylistgambar = new ArrayList();
@@ -64,14 +64,14 @@ public class MainActivity extends AppCompatActivity {
             mylistgambar.add(Gbr[i]);
         }
 
-        Adapter = new SimpleAdapter(this, mylist, R.layout.activity_hasil,
+        Adapter = new SimpleAdapter(this, mylist, R.layout.layout_isi_lv,
                 new String[] {"list","gbr"}, new int[] {R.id.tv_nama, R.id.imV});
         lv.setAdapter(Adapter);
     }
 
-
+    @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent = new Intent(getApplicationContext(),PesanCakeActivity.class);
+        Intent intent = new Intent(getApplicationContext(),PesanActivity.class);
         Bundle b = new Bundle();
         String txt = (String)mylistnama.get(position);
         String txt2 = (String)mylistgambar.get(position);

@@ -6,14 +6,16 @@
     >
 
     <TextView
-        android:text="Choose Your Cake"
+        android:text="Choose your cake"
+        android:gravity="center"
+        android:textSize="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView4" />
 
     <ListView
         android:id="@+id/lv"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         ></ListView>
 

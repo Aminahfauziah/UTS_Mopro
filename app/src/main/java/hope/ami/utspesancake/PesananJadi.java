@@ -1,19 +1,18 @@
 package hope.ami.utspesancake;
 
+/**
+ * Created by Andriana on 10/30/2016.
+ */
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/**
- * Created by acer on 10/31/2016.
- */
-
-public class HasilPesanActivity extends AppCompatActivity {
+public class PesananJadi extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hasil);
+        setContentView(R.layout.pesanan_jadi);
 
         //intent dari activity sebelumnya
         Bundle b = getIntent().getExtras();

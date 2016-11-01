@@ -1,9 +1,8 @@
 package hope.ami.utspesancake;
 
 /**
- * Created by acer on 10/31/2016.
+ * Created by Andriana on 10/30/2016.
  */
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
